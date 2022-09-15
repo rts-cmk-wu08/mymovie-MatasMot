@@ -2,8 +2,13 @@
     
 }
 
-.popular-movies {
+.nowPlaying-movies {
     display:flex;
     gap: 1rem;
     overflow-x: scroll;
+}
+
+.popular-movies {
+    gap: 1rem;
+    overflow-y: scroll;
 }
