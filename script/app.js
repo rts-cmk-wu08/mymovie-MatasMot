@@ -23,12 +23,26 @@
 
 document.addEventListener("DOMContentLoaded", () => { 
 
+    console.log(genres)
     let baseURL = "https://api.themoviedb.org/3"
     let apiKey = "c36a7c9420cf2a297763abcd5a593bf1"
 
+
     let wrapperElm = document.querySelector(".wrapper")
+
+    let headerElm = document.createElement("header")
+    headerElm.classList.add("header")
+    wrapperElm.append(headerElm)
+    headerElm.innerHTML = `
+        <h1>MyMovies</h1>
+        <button>switch</button>
+    `
+
     let mainElm = document.createElement("main")
     wrapperElm.append(mainElm)
+
+    let footerElm = document.createElement("footer")
+    wrapperElm.append(footerElm)
 
     let nowPlayingElm = document.createElement("section")
     nowPlayingElm.setAttribute("class", "nowPlaying")
@@ -37,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let nowPlayingHeadline = document.createElement("div")
     nowPlayingHeadline.setAttribute("class", "nowPlaying-headline")
     nowPlayingHeadline.innerHTML = `
-        <h1>Now Showing</h1>
+        <h2>Now Showing</h2>
         <a href="#">See more</a>
     `
     nowPlayingElm.append(nowPlayingHeadline)
@@ -70,29 +84,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let popularHeadline = document.createElement("div")
     popularHeadline.setAttribute("class", "popular-headline")
+    popularElm.append(popularHeadline)
     popularHeadline.innerHTML = `
-        <h1>Popular</h1>
+        <h2>Popular</h2>
         <a href="#">See more</a>
     `
-    popularElm.append(popularHeadline)
 
     let popularMovies = document.createElement("div")
     popularMovies.setAttribute("class", "popular-movies")
     popularElm.append(popularMovies)
 
-    fetch("https://api.themoviedb.org/3/movie/popular?api_key=c36a7c9420cf2a297763abcd5a593bf1")
+    fetch(`${baseURL}/movie/popular?api_key=${apiKey}`)
         .then(response => response.json())
         .then(data => { 
+
             console.log(data.results)
+
             data.results.forEach(movie => { 
                 let link = document.createElement("a")
                 link.setAttribute("href", `detail.html?id=${movie.id}`)
+                link.setAttribute("class", "movie-link")
                 link.innerHTML = `
-                    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
-                    <h3>${movie.title}</h3>
-                    <p>${movie.vote_average}/10 IMDb</p>
-                    `
+                    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
+                    <div>
+                        <h3>${movie.title}</h3>
+                        <p>${movie.vote_average}/10 IMDb</p>
+                        <p class="genres"></p>
+                    </div>
+                `
+
                 popularMovies.append(link)
+                let genreElm = link.querySelector(".genres")
+
+                console.log(genreElm)
+
+                movie.genre_ids.forEach(id => {
+                    //console.log(id)
+
+                    let currentGenre = genres.find(genre => genre.id == id)
+                    //console.log(currentGenre)
+                    let genreSpan = document.createElement("span")
+                    genreSpan.classList.add("genre__pill")
+                    genreSpan.innerText = currentGenre.name
+                    genreElm.append(genreSpan)
+                })
             })
     })
 })
