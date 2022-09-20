@@ -22,6 +22,10 @@
 
 
 document.addEventListener("DOMContentLoaded", () => { 
+
+    let baseURL = "https://api.themoviedb.org/3"
+    let apiKey = "c36a7c9420cf2a297763abcd5a593bf1"
+
     let wrapperElm = document.querySelector(".wrapper")
     let mainElm = document.createElement("main")
     wrapperElm.append(mainElm)
@@ -91,5 +95,4 @@ document.addEventListener("DOMContentLoaded", () => {
                 popularMovies.append(link)
             })
     })
-    
 })
