@@ -68,9 +68,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 let link = document.createElement("a")
                 link.setAttribute("href", `detail.html?id=${movie.id}`)
                 link.innerHTML = `
-                    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
-                    <h3>${movie.title}</h3>
-                    <p>${movie.vote_average}/10 IMDb</p>
+                    <div class="nowPlayingImgDiv">
+                        <img class="img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
+                    </div>
+                    <h3 class="movieTitle">${movie.title}</h3>
+                    <p class="imdb">${movie.vote_average}/10 IMDb</p>
                     `
                 nowPlayingMovies.append(link)
             })
@@ -105,10 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 link.setAttribute("href", `detail.html?id=${movie.id}`)
                 link.setAttribute("class", "movie-link")
                 link.innerHTML = `
-                    <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
+                    <div class="popularPosterDiv">
+                        <img class="popularPosterImg" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} poster">
+                    </div>
                     <div>
-                        <h3>${movie.title}</h3>
-                        <p>${movie.vote_average}/10 IMDb</p>
+                        <h3 class="movieTitle">${movie.title}</h3>
+                        <p class="imdb">${movie.vote_average}/10 IMDb</p>
                         <p class="genres"></p>
                     </div>
                 `
