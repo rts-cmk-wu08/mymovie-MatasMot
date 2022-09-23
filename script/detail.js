@@ -29,15 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div class="box">
                         <h3 class="movieTitle">${data.title}</h3>
-                        <p class="imdb">${data.vote_average}/10 IMDb</p>
+                        <p class="imdb"> <img src="/img/star.png" alt="little star"> ${data.vote_average}/10 IMDb</p>
                         <p class="genres"></p>
                         <div class="rlr">
-                            <p class="runtime">Length <span>${data.runtime/60}h</span></p>
+                            <p class="runtime">Length <span>${Math.floor(data.runtime/60)}h ${data.runtime % 60} min</span></p>
                             <p class="language">Language <span>${data.original_language}</span></p>
-                            <p class="rating">Rating <span></span></p>
+                            <p class="rating">Year <span>${data.release_date.slice(0, -6)}</span></p>
                         </div>
                         <h3 class="description">Description</h3>
                         <p class="overview">${data.overview}</p>
+                        <div class="castHeadline">
+                            <h2>Cast</h2>
+                            <a href="#">See more</a>
+                        </div>
                     </div>
                 `
                 headerElm.append(article)

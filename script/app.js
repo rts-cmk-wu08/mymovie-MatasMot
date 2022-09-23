@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <img class="img" src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
                     </div>
                     <h3 class="movieTitle">${movie.title}</h3>
-                    <p class="imdb">${movie.vote_average}/10 IMDb</p>
+                    <p class="imdb"><img src="/img/star.png" alt="little star"> ${movie.vote_average}/10 IMDb</p>
                     `
                 nowPlayingMovies.append(link)
             })
@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                     <div>
                         <h3 class="movieTitle">${movie.title}</h3>
-                        <p class="imdb">${movie.vote_average}/10 IMDb</p>
+                        <p class="imdb"><img src="/img/star.png" alt="little star"> ${movie.vote_average}/10 IMDb</p>
                         <p class="genres"></p>
                     </div>
                 `

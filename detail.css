@@ -52,7 +52,7 @@
 }
 
 .genres {
-    display: flex;
+    
 }
 
 .genre__pill {
@@ -63,6 +63,7 @@
     margin-right: 0.5rem;
     text-transform: capitalize;
     font-size: 8px;
+    display: inline-block;
 }
 
 .rlr {
@@ -85,5 +86,23 @@
 .overview {
     color: #9C9C9C;
     font-size: 12px;
+}
+
+.castHeadline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.castHeadline h2 {
+    font-size: 16px;
+}
+
+.castHeadline a {
+    font-size: 10px;
+    border: 1px solid #AAA9B1;
+    color: #AAA9B1;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    text-decoration: none;
 }
 
