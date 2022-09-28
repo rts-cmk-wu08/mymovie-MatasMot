@@ -1,0 +1,138 @@
+* {
+    font-family: 'Mulish', sans-serif;
+}
+
+.wrapper {
+    max-width: 375px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h1 {
+    font-size: 16px;
+    padding-left: 9rem;
+}
+
+.header button {
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+    border: none;
+    padding: 0.5rem;
+}
+
+.popular {
+    
+}
+
+.nowPlaying-movies {
+    display:flex;
+    gap: 1rem;
+    overflow-x: scroll;
+}
+
+.nowPlaying-headline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nowPlaying-headline h2, .popular-headline h2 {
+    font-size: 16px;
+}
+
+.nowPlaying-headline a, .popular-headline a {
+    font-size: 10px;
+    border: 1px solid #AAA9B1;
+    color: #AAA9B1;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 0.3rem;
+}
+
+
+.popular-movies {
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    
+}
+
+h2, h1 {
+    color: #110E47;
+    font-family: 'Merriweather', serif;
+}
+
+.genres {
+    
+}
+
+.genre__pill {
+    background-color: #DBE3FF;
+    color: #88A4E8;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    text-transform: capitalize;
+    font-size: 8px;
+    display: inline-block;
+}
+
+.imdb {
+    color: #9C9C9C;
+    font-size: 12px;
+}
+
+.movieTitle {
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.popular-headline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popularPosterDiv {
+    width: 85px;
+    height: 120px;
+}
+
+.popularPosterImg {
+    max-width: 85px;  
+    height: 120px;  
+    object-fit: cover;  
+    border-radius: 1rem;
+}
+
+.img {
+    max-width: 143px;
+    height: 212px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+button {
+    
+}
+
+.movie-link {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    padding: 0.5rem 0;
+}
+
+.bi-star-fill {
+    color: #FFC107;
+    width: 12px; 
+    height: auto;
+}

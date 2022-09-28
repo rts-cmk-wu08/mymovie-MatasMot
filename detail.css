@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 375px;
+}
+
+.header {
+    
+}
+
+.detailPosterDiv {
+    height: 300px;
+    grid-column: 1/-1;
+    grid-row: 1/11;
+}
+
+.detailPosterDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detailMovie-article {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+}
+
+.box {
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    grid-row: 9/-1;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+}
+
+.movieTitle {
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.imdb {
+    color: #9C9C9C;
+    font-size: 12px;
+}
+
+.genres {
+    
+}
+
+.genre__pill {
+    background-color: #DBE3FF;
+    color: #88A4E8;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    text-transform: capitalize;
+    font-size: 8px;
+    display: inline-block;
+}
+
+.rlr {
+    color: #9C9C9C;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rlr span{
+    color:#000000;
+    font-weight: bold;
+    
+}
+
+.description {
+    font-size: 16px;
+}
+
+.overview {
+    color: #9C9C9C;
+    font-size: 12px;
+}
+
+.castHeadline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.castHeadline h2 {
+    font-size: 16px;
+}
+
+.castHeadline a {
+    font-size: 10px;
+    border: 1px solid #AAA9B1;
+    color: #AAA9B1;
+    border-radius: 1rem;
+    padding: 0.3rem;
+    text-decoration: none;
+}
+
+.bi-star-fill {
+    color: #FFC107;
+    width: 12px; 
+    height: auto;
+}
+
+.movieHeadline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bi-bookmark {
+    color: black;
+    width: 24px; 
+    height: auto;
+}
+
+.bi-arrow-left {
+    color: black;
+    width: 24px; 
+    height: auto;
+    position: absolute;
+    top: 3rem;
+    left: 2.5rem;
+    border: #000000 2px solid;
+    border-radius: 50%;
+}
+
+.detailMovie-article button {
+    color: white;
+    background-color: black;
+    border-radius: 1rem;
+    border: none;
+    padding: 0.5rem;
+    position: absolute;
+    top: 3rem;
+    right: 2.5rem;
+    padding: 0.7rem;
+}
