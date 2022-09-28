@@ -24,15 +24,17 @@
 }
 
 .detailMovie-article {
+    /*
     display: grid;
     grid-template-columns: repeat(30, 1fr);
     grid-template-rows: repeat(30, 1fr);
+    */
 }
 
 .box {
     background-color: #FFFFFF;
     border-radius: 1rem;
-    padding: 2.5rem;
+    padding: 2rem;
     grid-row: 9/-1;
     grid-column: 1/-1;
     display: flex;
@@ -145,4 +147,25 @@
     top: 3rem;
     right: 2.5rem;
     padding: 0.7rem;
+}
+
+
+.castArticles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.popularPosterImg {
+    border-radius: 1rem;
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+}
+
+.actors-name {
+    font-size: 12px;
+    color: black;
+    font-weight: normal;
 }

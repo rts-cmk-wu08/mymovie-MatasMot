@@ -1,24 +1,3 @@
-// document.addEventListener("DOMContentLoaded", () => {
-    
-//     fetch("") // Fetch the JSON file. Den kommer tilbage med et svar.
-//     //https://image.tmdb.org/t/p/original/
-
-//         .then(response => response.json()) // Convert the response to JSON
-//         .then(data => {
-//             console.log(data);
-
-//             data.bicycle.forEach(bicycle => {
-//                 let link = document.createElement("a")
-//                 link.setAttribute("href", `detail.html?id=${bicycle.id}`)
-//                 link.innerHTML = `
-//                     <h2>${bicycle.model}</h2>
-//                 `
-
-//                 document.body.append(link)
-//             })
-//         })
-// })
-
 
 
 document.addEventListener("DOMContentLoaded", () => { 
