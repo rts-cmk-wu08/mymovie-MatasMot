@@ -3,26 +3,25 @@
 }
 
 .wrapper {
-    max-width: 375px;
+    
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
 }
 
 .header h1 {
     font-size: 16px;
-    padding-left: 9rem;
+    padding-top: 1rem;
 }
 
-.header button {
+/* .header button {
     color: white;
     background-color: black;
     border-radius: 1rem;
     border: none;
     padding: 0.5rem;
-}
+} */
 
 .popular {
     
@@ -136,3 +135,4 @@ button {
     width: 12px; 
     height: auto;
 }
+

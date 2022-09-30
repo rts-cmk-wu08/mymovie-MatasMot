@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     wrapperElm.append(headerElm)
     headerElm.innerHTML = `
         <h1>MyMovies</h1>
-        <button>switch</button>
+        <label  id="dark-change"></label>
     `
 
     let mainElm = document.createElement("main")
